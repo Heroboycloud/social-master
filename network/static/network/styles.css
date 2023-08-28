@@ -1,0 +1,89 @@
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    height: calc(100vh - 5.5rem);
+    margin-top: 4.5rem;
+}
+
+.like,
+.like:hover {
+    color: red;
+}
+
+.like--active::before {
+    content: "♡";
+}
+
+.like--inactive::before {
+    content: "❤";
+}
+
+.comment_button {
+    border: 1.25px solid maroon;
+    color: maroon;
+}
+
+.comment_button:hover {
+    background: maroon;
+    color: white;
+}
+
+.edit_button {
+    border: 1px solid teal;
+    color: teal;
+}
+
+.edit_button:hover {
+    background: teal;
+    color: white;
+}
+
+.comment__value {
+    font-size: 14px;
+}
+
+@keyframes grow {
+    0% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        height: 100%;
+        line-height: 100%;
+    }
+}
+
+.comment {
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5vw;
+}
+
+@media only screen and (max-width: 767px) {
+    .profile {
+        display: block;
+    }
+}
+
+.navbar {
+    background-color: black;
+}
+
+/* body {
+    background: red;
+} */
